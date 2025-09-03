@@ -8,9 +8,9 @@ I’ve changed some parts of the original tutorial code after i finished followi
 
 ## Screenshots
 
-[Weather App Screenshot 1](images\\1.png)
-[Weather App Screenshot 2](images\\2.png)
-[Weather App Screenshot 3](images\\3.png)
+![Weather App Screenshot 1](images\\1.png)
+![Weather App Screenshot 2](images\\2.png)
+![Weather App Screenshot 3](images\\3.png)
 
 ## Features  
 - Enter any city and get the current weather  
