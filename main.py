@@ -45,12 +45,21 @@ class WeatherApp(QWidget):
         self.setWindowTitle("Weather App")
         
         vbox = QVBoxLayout()
-        ui_elements = [self.city_label, self.city_input, self.get_weather_button,
-                   self.temperature_label, self.emoji_label, self.description_label] # store in a list 
+        ui_elements = [self.city_label, 
+                       self.city_input, 
+                       self.get_weather_button,
+                       self.temperature_label, 
+                       self.emoji_label, 
+                       self.description_label] # store in a list 
         
         for element in ui_elements: # use for loop for better structure
             vbox.addWidget(element) 
+            if element is self.get_weather_button:
+                continue
+            element.setAlignment(Qt.AlignCenter)
             
+        self.setLayout(vbox)
+        
         # old code
         # vbox.addWidget(self.city_label)
         # vbox.addWidget(self.city_input)
@@ -59,13 +68,11 @@ class WeatherApp(QWidget):
         # vbox.addWidget(self.emoji_label)
         # vbox.addWidget(self.description_label)
         
-        self.setLayout(vbox)
-
-        self.city_label.setAlignment(Qt.AlignCenter)
-        self.city_input.setAlignment(Qt.AlignCenter)
-        self.temperature_label.setAlignment(Qt.AlignCenter)
-        self.emoji_label.setAlignment(Qt.AlignCenter)
-        self.description_label.setAlignment(Qt.AlignCenter)
+        # self.city_label.setAlignment(Qt.AlignCenter)
+        # self.city_input.setAlignment(Qt.AlignCenter)
+        # self.temperature_label.setAlignment(Qt.AlignCenter)
+        # self.emoji_label.setAlignment(Qt.AlignCenter)
+        # self.description_label.setAlignment(Qt.AlignCenter)
         
         self.city_label.setObjectName("city_label")
         self.city_input.setObjectName("city_input")
